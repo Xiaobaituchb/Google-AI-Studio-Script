@@ -59,9 +59,3 @@ The script includes code for **Grounding (Google Search)** and **URL Context**, 
 ## 📜 License
 
 This project is licensed under the **MIT License**.
-
-### Table of Errors in Your Prompt
-
-| **Before Revision** | **After Revision** | **Analysis** |
-|----------------------|--------------------|---------------|
-| Write a readme.md for the code above. | *(No change)* | No errors found. |
