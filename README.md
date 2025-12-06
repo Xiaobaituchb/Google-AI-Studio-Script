@@ -20,7 +20,7 @@ A userscript for [Google AI Studio](https://aistudio.google.com/) that automates
 
 1.  Install a userscript manager like **[Tampermonkey](https://www.tampermonkey.net/)** or **Violentmonkey**.
 2.  Create a new script.
-3.  Copy and paste the code from `script.js` into the editor.
+3.  Copy and paste the code from `google-ai-studio-auto-config.user.js` into the editor.
 4.  Save the script.
 5.  Navigate to [Google AI Studio](https://aistudio.google.com/prompts/new_chat) to see it in action.
 
