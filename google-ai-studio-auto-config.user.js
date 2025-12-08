@@ -20,7 +20,7 @@
         SETTINGS: {
             temperature: "1",
             mediaResolution: "High", // Case sensitive based on UI option text
-            thinkingLevel: "High",   // Case sensitive
+            thinkingLevel: "High", // Case sensitive
             toggles: {
                 codeExecution: true,
                 googleSearch: true, // Grounding
@@ -269,16 +269,19 @@ instead of
 
         // 2. Run Settings Loop (Initial pass + Double check)
         const promptInput = await waitForElement(CONSTANTS.SELECTORS.promptInput);
-        const doubleCheckDuration = 3000; // 3 seconds
+        const doubleCheckDuration = 8000; // 8 seconds
         const endTime = Date.now() + doubleCheckDuration;
+
+        let hasFocused = false;
 
         do {
             // A. Apply/Enforce settings
             await enforceRunSettings();
 
             // B. Ensure focus remains on input
-            if (promptInput && document.activeElement !== promptInput) {
+            if (promptInput && document.activeElement !== promptInput && !hasFocused) {
                 promptInput.focus();
+                hasFocused = true;
             }
 
             // C. Wait before next check, unless time is up
